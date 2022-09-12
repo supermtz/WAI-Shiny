@@ -17,7 +17,7 @@ library(shiny)
 
 ui <- fluidPage(####----
                 
-                headerPanel("WAI Berechnungstool für WAI in der Personenberatung"),
+                headerPanel("WAI Berechnungstool fuer WAI in der Personenberatung"),
                 
                 #Arbeitsart
                 selectizeInput(
@@ -26,47 +26,47 @@ ui <- fluidPage(####----
                   multiple = FALSE, 
                   selected = FALSE,
                   choices = c("",
-                              "vorwiegend geistig tätig",
-                              "vorwiegend körperlich tätig",
-                              "etwa gleichermaßen geistig und körperlich tätig")
+                              "vorwiegend geistig taetig",
+                              "vorwiegend koerperlich taetig",
+                              "etwa gleichermassen geistig und koerperlich taetig")
                   
                 ),
-                #Arbeitsfähigkeit psychisch und physisch
+                #Arbeitsfaehigkeit psychisch und physisch
                 numericInput(
-                  inputId = "derzeitige_arbeitsfähigkeit",
-                  label = "Wenn Sie Ihre beste, je erreichte Arbeitsfähigkeit mit 10 Punkten bewerten:\n
-    Wie viele Punkte würden Sie dann für Ihre derzeitige Arbeitsfähigkeit geben?\n
-    (0 bedeutet, dass Sie derzeit arbeitsunfähig sind)",
+                  inputId = "derzeitige_arbeitsfaehigkeit",
+                  label = "Wenn Sie Ihre beste, je erreichte Arbeitsfaehigkeit mit 10 Punkten bewerten:\n
+    Wie viele Punkte wuerden Sie dann fuer Ihre derzeitige Arbeitsfaehigkeit geben?\n
+    (0 bedeutet, dass Sie derzeit arbeitsunfaehig sind)",
                   min = 1, max = 10, step = 1, value = FALSE
                 ),
                 selectizeInput(
-                  inputId = "körperlich_arbeitsfähigkeit",
-                  label = "Wie schätzen Sie Ihre derzeitige Arbeitsfähigkeit in Bezug auf die körperlichen Arbeitsanforderungen ein?",
+                  inputId = "koerperlich_arbeitsfaehigkeit",
+                  label = "Wie schaetzen Sie Ihre derzeitige Arbeitsfaehigkeit in Bezug auf die koerperlichen Arbeitsanforderungen ein?",
                   multiple = FALSE,
                   choices = c("",
                               "sehr gut",
                               "eher gut",
-                              "mittelmäßig",
+                              "mittelmaessig",
                               "eher schlecht",
                               "sehr schlecht"),
                   
                 ),
                 selectizeInput(
-                  inputId = "psychisch_arbeitsfähigkeit",
-                  label = "Wie schätzen Sie Ihre derzeitige Arbeitsfähigkeit in Bezug auf die psychische Arbeitsanforderungen ein?",
+                  inputId = "psychisch_arbeitsfaehigkeit",
+                  label = "Wie schaetzen Sie Ihre derzeitige Arbeitsfaehigkeit in Bezug auf die psychische Arbeitsanforderungen ein?",
                   multiple = FALSE,
                   choices = c("",
                               "sehr gut",
                               "eher gut",
-                              "mittelmäßig",
+                              "mittelmaessig",
                               "eher schlecht",
                               "sehr schlecht"),
                   
                 ),
-                ####- Unfall Krankheiten --> hier ZwischenÜberschrift einfügen
+                ####- Unfall Krankheiten --> hier Zwischenueberschrift einfuegen
                 selectizeInput(
                   inputId = "krankheit_unfall",
-                  label = "Unfallverletzungen (z.B. des Rückens, der Glieder, Verbrennungen)",
+                  label = "Unfallverletzungen (z.B. des Rueckens, der Glieder, Verbrennungen)",
                   multiple = FALSE,
                   choices = c("",
                               "eigene Diagnose",
@@ -76,8 +76,8 @@ ui <- fluidPage(####----
                 ),
                 selectizeInput(
                   inputId = "krankheit_muskel",
-                  label = "Erkrankungen des Muskel-Skelett-Systems von Rücken, Gliedern oder anderen Körperteilen\n
-    (z.B. wiederholte Schmerzen in Gelenken oder Muskeln, Ischias, Rheuma, Wirbelsäulenerkrankungen)",
+                  label = "Erkrankungen des Muskel-Skelett-Systems von Ruecken, Gliedern oder anderen Koerperteilen\n
+    (z.B. wiederholte Schmerzen in Gelenken oder Muskeln, Ischias, Rheuma, Wirbelsaeulenerkrankungen)",
                   multiple = FALSE,
                   choices = c("",
                               "eigene Diagnose",
@@ -107,7 +107,7 @@ ui <- fluidPage(####----
                 ),
                 selectizeInput(
                   inputId = "krankheit_mental",
-                  label = "Psychische Beeinträchtigungen (z.B. Depressionen, Angstzustände, chronische Schlaflosigkeit, psychovegetatives Erschöpfungssyndrom)",
+                  label = "Psychische Beeintraechtigungen (z.B. Depressionen, Angstzustaende, chronische Schlaflosigkeit, psychovegetatives Erschoepfungssyndrom)",
                   multiple = FALSE,
                   choices = c("",
                               "eigene Diagnose",
@@ -116,7 +116,7 @@ ui <- fluidPage(####----
                 ),
                 selectizeInput(
                   inputId = "krankheit_neuro",
-                  label = "Neurologische und sensorische Erkrankungen (z.B. Tinnitus, Hörschäden, Augenerkrankungen, Migräne, Epilepsie)",
+                  label = "Neurologische und sensorische Erkrankungen (z.B. Tinnitus, Hoerschaeden, Augenerkrankungen, Migraene, Epilepsie)",
                   multiple = FALSE,
                   choices = c("",
                               "eigene Diagnose",
@@ -125,7 +125,7 @@ ui <- fluidPage(####----
                 ),
                 selectizeInput(
                   inputId = "krankheit_verdauung",
-                  label = "Erkrankungen des Verdauungssystems (z.B. der Gallenblase, Leber, Bauchspeicheldrüse, Darm)",
+                  label = "Erkrankungen des Verdauungssystems (z.B. der Gallenblase, Leber, Bauchspeicheldruese, Darm)",
                   multiple = FALSE,
                   choices = c("",
                               "eigene Diagnose",
@@ -134,7 +134,7 @@ ui <- fluidPage(####----
                 ),
                 selectizeInput(
                   inputId = "krankheit_genital",
-                  label = "Erkrankungen im Urogenitaltrakt (z.B. Harnwegsinfektionen, gynäkologische Erkrankungen)",
+                  label = "Erkrankungen im Urogenitaltrakt (z.B. Harnwegsinfektionen, gynaekologische Erkrankungen)",
                   multiple = FALSE,
                   choices = c("",
                               "eigene Diagnose",
@@ -161,7 +161,7 @@ ui <- fluidPage(####----
                 ),
                 selectizeInput(
                   inputId = "krankheit_hormon",
-                  label = "Hormon- / Stoffwechselerkrankungen (z.B. Diabetes, Fettleibigkeit, Schilddrüsenprobleme)",
+                  label = "Hormon- / Stoffwechselerkrankungen (z.B. Diabetes, Fettleibigkeit, Schilddruesenprobleme)",
                   multiple = FALSE,
                   choices = c("",
                               "eigene Diagnose",
@@ -170,7 +170,7 @@ ui <- fluidPage(####----
                 ),
                 selectizeInput(
                   inputId = "krankheit_blut",
-                  label = "Krankheiten des Blutes (z.B. Anämie)",
+                  label = "Krankheiten des Blutes (z.B. Anaemie)",
                   multiple = FALSE,
                   choices = c("",
                               "eigene Diagnose",
@@ -200,10 +200,10 @@ ui <- fluidPage(####----
                   label = "Andere Krankheiten - bitte eintragen, falls vorhanden: ",
                 ),
                 
-                ## Geschätzte Beeinträchtigung der Arbeitsleistung durch die Krankheiten 
+                ## Geschaetzte Beeintraechtigung der Arbeitsleistung durch die Krankheiten 
                 selectizeInput(
-                  inputId = "beeinträchtigung_1",
-                  label = "Keine Beeinträchtigung / Ich habe keine Erkrankung",
+                  inputId = "beeintraechtigung_1",
+                  label = "Keine Beeintraechtigung / Ich habe keine Erkrankung",
                   multiple = FALSE,
                   choices = c("",
                               "zutreffend",
@@ -211,8 +211,8 @@ ui <- fluidPage(####----
                   ),
                 ),
                 selectizeInput(
-                  inputId = "beeinträchtigung_2",
-                  label = "Ich kann meine Arbeit ausführen, habe aber Beschwerden",
+                  inputId = "beeintraechtigung_2",
+                  label = "Ich kann meine Arbeit ausfuehren, habe aber Beschwerden",
                   multiple = FALSE,
                   choices = c("",
                               "zutreffend",
@@ -220,9 +220,9 @@ ui <- fluidPage(####----
                   )
                 ),
                 selectizeInput(
-                  inputId = "beeinträchtigung_3",
+                  inputId = "beeintraechtigung_3",
                   label = "Ich bin manchmal gezwungen, langsamer zu arbeiten\n
-    oder meine Arbeitsmethoden zu ändern",
+    oder meine Arbeitsmethoden zu aendern",
                   multiple = FALSE,
                   choices = c("",
                               "zutreffend",
@@ -230,9 +230,9 @@ ui <- fluidPage(####----
                   )
                 ),
                 selectizeInput(
-                  inputId = "beeinträchtigung_4",
+                  inputId = "beeintraechtigung_4",
                   label = "Ich bin oft gezwungen, langsamer zu arbeiten\n
-    oder meine Arbeitsmethoden zu ändern",
+    oder meine Arbeitsmethoden zu aendern",
                   multiple = FALSE,
                   choices = c("",
                               "zutreffend",
@@ -240,7 +240,7 @@ ui <- fluidPage(####----
                   )
                 ),
                 selectizeInput(
-                  inputId = "beeinträchtigung_5",
+                  inputId = "beeintraechtigung_5",
                   label = "Wegen meiner Krankheit bin ich nur\n
     in der Lage Teilzeitarbeit zu verrichten",
                   multiple = FALSE,
@@ -250,8 +250,8 @@ ui <- fluidPage(####----
                   )
                 ),
                 selectizeInput(
-                  inputId = "beeinträchtigung_6",
-                  label = "Meiner Meinung nach bin ich völlig arbeitsunfähig",
+                  inputId = "beeintraechtigung_6",
+                  label = "Meiner Meinung nach bin ich voellig arbeitsunfaehig",
                   multiple = FALSE,
                   choices = c("",
                               "zutreffend",
@@ -266,8 +266,8 @@ ui <- fluidPage(####----
     im letzten Jahr (12 Monate) der Arbeit fern?",
                   multiple = FALSE,
                   choices = c("",
-                              "überhaupt keinen",
-                              "höchstens 9 Tage",
+                              "ueberhaupt keinen",
+                              "hoechstens 9 Tage",
                               "10-24 Tage",
                               "25-99 Tage",
                               "100-365 Tage"
@@ -275,9 +275,9 @@ ui <- fluidPage(####----
                   )
                 ),
                 selectizeInput(
-                  inputId = "arbeitsfähigkeit_zukunft",
+                  inputId = "arbeitsfaehigkeit_zukunft",
                   label = "Glauben Sie, dass Sie, ausgehend von Ihrem jetzigen Gesundheitszustand,\n
-    Ihre derzeitige Arbeit auch in den nächsten zwei Jahren ausüben können?",
+    Ihre derzeitige Arbeit auch in den naechsten zwei Jahren ausueben koennen?",
                   multiple = FALSE,
                   choices = c("",
                               "unwahrscheinlich",
@@ -290,11 +290,11 @@ ui <- fluidPage(####----
                 #psychische Leistungsreservern
                 selectizeInput(
                   inputId = "leistungsreserven_1",
-                  label = "Haben Sie in der letzten Zeit Ihre täglichen Aufgaben mit Freude erledigt?",
+                  label = "Haben Sie in der letzten Zeit Ihre taeglichen Aufgaben mit Freude erledigt?",
                   multiple = FALSE,
                   choices = c("",
-                              "häufig",
-                              "eher häufig",
+                              "haeufig",
+                              "eher haeufig",
                               "manchmal",
                               "eher selten",
                               "niemals"
@@ -306,8 +306,8 @@ ui <- fluidPage(####----
                   label = "Waren Sie in letzter Zeit aktiv und rege?",
                   multiple = FALSE,
                   choices = c("",
-                              "häufig",
-                              "eher häufig",
+                              "haeufig",
+                              "eher haeufig",
                               "manchmal",
                               "eher selten",
                               "niemals"
@@ -319,8 +319,8 @@ ui <- fluidPage(####----
                   label = "Waren Sie in letzter Zeit zuversichtlich, was die Zukunft betrifft?",
                   multiple = FALSE,
                   choices = c("",
-                              "häufig",
-                              "eher häufig",
+                              "haeufig",
+                              "eher haeufig",
                               "manchmal",
                               "eher selten",
                               "niemals"
@@ -329,15 +329,15 @@ ui <- fluidPage(####----
                 ),
                 #Krankenstand im vergangenen Jahr (12 Monate)
                 selectizeInput(
-                  inputId = "krankenstand_präzise",
+                  inputId = "krankenstand_praezise",
                   label = "Sie haben bei Frage 6 bereits Angaben zu Krankenstands-Tagen\n
     (aufgrund von Krankheit, Gesundheitsvorsorge, Untersuchung) im vergangenen Jahr\n
     (12 Monate) gemacht. Bitte spezifizieren Sie Ihre Aussage:\n
-    In welchem Ausmaß haben Sie in den vergangenen 12 Monaten Krankenstand\n
+    In welchem Ausmass haben Sie in den vergangenen 12 Monaten Krankenstand\n
     in Anspruch genommen?",
                   multiple = FALSE,
                   choices = c("",
-                              "überhaupt keinen",
+                              "ueberhaupt keinen",
                               "1-3 Tage",
                               "4-6 Tage",
                               "7-9 Tage",
@@ -366,10 +366,10 @@ ui <- fluidPage(####----
 
 server <- function(input, output, session) {
   
-  #Funktionen für WAI Pipe
+  #Funktionen fuer WAI Pipe
   leistungsreserven_fun <- function(x) {
-    case_when(x %in% c("häufig", "immer", "ständig") ~ 4,
-              x %in% c("eher häufig") ~ 3,
+    case_when(x %in% c("haeufig", "immer", "staendig") ~ 4,
+              x %in% c("eher haeufig") ~ 3,
               x %in% c("manchmal") ~ 2,
               x %in% c("eher selten") ~ 1,
               x %in% c("niemals") ~ 0)
@@ -379,10 +379,10 @@ server <- function(input, output, session) {
               x %in% c("Diagnose vom Arzt") ~ 1,
               x %in% c("liegt nicht vor") ~ 0)
   }
-  arbeitsfähigkeit_fun <- function(x){
+  arbeitsfaehigkeit_fun <- function(x){
     case_when(x %in% c("sehr gut") ~ 5,
               x %in% c("eher gut") ~ 4,
-              x %in% c("mittelmäßig") ~ 3,
+              x %in% c("mittelmaessig") ~ 3,
               x %in% c("eher schlecht") ~ 2,
               x %in% c("sehr schlecht") ~ 1)
   }
@@ -390,9 +390,9 @@ server <- function(input, output, session) {
   # Umrechnungs Pipe (Text zu Zahl und Zahl zu WAI Berechnung)
   data_raw <- reactive({
     df <- data.frame(arbeitsart = input$arbeitsart, #----
-                     derzeitige_arbeitsfähigkeit = input$derzeitige_arbeitsfähigkeit,
-                     körperlich_arbeitsfähigkeit = input$körperlich_arbeitsfähigkeit,
-                     psychisch_arbeitsfähigkeit = input$psychisch_arbeitsfähigkeit,
+                     derzeitige_arbeitsfaehigkeit = input$derzeitige_arbeitsfaehigkeit,
+                     koerperlich_arbeitsfaehigkeit = input$koerperlich_arbeitsfaehigkeit,
+                     psychisch_arbeitsfaehigkeit = input$psychisch_arbeitsfaehigkeit,
                      krankheit_unfall = input$krankheit_unfall, #5
                      krankheit_muskel = input$krankheit_muskel,
                      krankheit_herz = input$krankheit_herz,
@@ -408,65 +408,65 @@ server <- function(input, output, session) {
                      krankheit_angeboren = input$krankheit_angeboren,
                      krankheit_andere = input$krankheit_andere, #18
                      krankheit_andere2 = input$krankheit_andere2,
-                     beeinträchtigung_1 = input$beeinträchtigung_1,
-                     beeinträchtigung_2 = input$beeinträchtigung_2,
-                     beeinträchtigung_3 = input$beeinträchtigung_3,
-                     beeinträchtigung_4 = input$beeinträchtigung_4,
-                     beeinträchtigung_5 = input$beeinträchtigung_5,
-                     beeinträchtigung_6 = input$beeinträchtigung_6,
+                     beeintraechtigung_1 = input$beeintraechtigung_1,
+                     beeintraechtigung_2 = input$beeintraechtigung_2,
+                     beeintraechtigung_3 = input$beeintraechtigung_3,
+                     beeintraechtigung_4 = input$beeintraechtigung_4,
+                     beeintraechtigung_5 = input$beeintraechtigung_5,
+                     beeintraechtigung_6 = input$beeintraechtigung_6,
                      krankenstand = input$krankenstand,
-                     arbeitsfähigkeit_zukunft = input$arbeitsfähigkeit_zukunft,
+                     arbeitsfaehigkeit_zukunft = input$arbeitsfaehigkeit_zukunft,
                      leistungsreserven_1 = input$leistungsreserven_1,
                      leistungsreserven_2 = input$leistungsreserven_2,
                      leistungsreserven_3 = input$leistungsreserven_3,
-                     krankenstand_präzise = input$krankenstand_präzise) %>% #31 Inputs
-      mutate(arbeitsart = case_when(arbeitsart == "vorwiegend geistig tätig" ~ 1,
-                                    arbeitsart == "vorwiegend körperlich tätig" ~ 2,
-                                    arbeitsart == "etwa gleichermaßen geistig und körperlich tätig" ~ 3)) %>% 
-      mutate(derzeitige_arbeitsfähigkeit = case_when(derzeitige_arbeitsfähigkeit == "0" ~ 0,
-                                                     derzeitige_arbeitsfähigkeit == "1" ~ 1,
-                                                     derzeitige_arbeitsfähigkeit == "2" ~ 2,
-                                                     derzeitige_arbeitsfähigkeit == "3" ~ 3,
-                                                     derzeitige_arbeitsfähigkeit == "4" ~ 4,
-                                                     derzeitige_arbeitsfähigkeit == "5" ~ 5,
-                                                     derzeitige_arbeitsfähigkeit == "6" ~ 6,
-                                                     derzeitige_arbeitsfähigkeit == "7" ~ 7,
-                                                     derzeitige_arbeitsfähigkeit == "8" ~ 8,
-                                                     derzeitige_arbeitsfähigkeit == "9" ~ 9,
-                                                     derzeitige_arbeitsfähigkeit == "10" ~ 10)) %>% 
-      mutate_at(c(3:4), arbeitsfähigkeit_fun) %>% #psychische und körperliche Arbeitsfähigkeit
+                     krankenstand_praezise = input$krankenstand_praezise) %>% #31 Inputs
+      mutate(arbeitsart = case_when(arbeitsart == "vorwiegend geistig taetig" ~ 1,
+                                    arbeitsart == "vorwiegend koerperlich taetig" ~ 2,
+                                    arbeitsart == "etwa gleichermassen geistig und koerperlich taetig" ~ 3)) %>% 
+      mutate(derzeitige_arbeitsfaehigkeit = case_when(derzeitige_arbeitsfaehigkeit == "0" ~ 0,
+                                                     derzeitige_arbeitsfaehigkeit == "1" ~ 1,
+                                                     derzeitige_arbeitsfaehigkeit == "2" ~ 2,
+                                                     derzeitige_arbeitsfaehigkeit == "3" ~ 3,
+                                                     derzeitige_arbeitsfaehigkeit == "4" ~ 4,
+                                                     derzeitige_arbeitsfaehigkeit == "5" ~ 5,
+                                                     derzeitige_arbeitsfaehigkeit == "6" ~ 6,
+                                                     derzeitige_arbeitsfaehigkeit == "7" ~ 7,
+                                                     derzeitige_arbeitsfaehigkeit == "8" ~ 8,
+                                                     derzeitige_arbeitsfaehigkeit == "9" ~ 9,
+                                                     derzeitige_arbeitsfaehigkeit == "10" ~ 10)) %>% 
+      mutate_at(c(3:4), arbeitsfaehigkeit_fun) %>% #psychische und koerperliche Arbeitsfaehigkeit
       mutate_at(c(5:18), krankheit_fun)  %>% #Alle Krankheiten
-      mutate(beeinträchtigung_1 = case_when(beeinträchtigung_1 == "zutreffend" ~ 1,
-                                            beeinträchtigung_1 == "nicht zutreffend" ~ 0)) %>% 
-      mutate(beeinträchtigung_2 = case_when(beeinträchtigung_2 == "zutreffend" ~ 2,
-                                            beeinträchtigung_2 == "nicht zutreffend" ~ 0)) %>% 
-      mutate(beeinträchtigung_3 = case_when(beeinträchtigung_3 == "zutreffend" ~ 3,
-                                            beeinträchtigung_3 == "nicht zutreffend" ~ 0)) %>% 
-      mutate(beeinträchtigung_4 = case_when(beeinträchtigung_4 == "zutreffend" ~ 4,
-                                            beeinträchtigung_4 == "nicht zutreffend" ~ 0)) %>% 
-      mutate(beeinträchtigung_5 = case_when(beeinträchtigung_5 == "zutreffend" ~ 5,
-                                            beeinträchtigung_5 == "nicht zutreffend" ~ 0)) %>% 
-      mutate(beeinträchtigung_6 = case_when(beeinträchtigung_6 == "zutreffend" ~ 6,
-                                            beeinträchtigung_6 == "nicht zutreffend" ~ 0)) %>% 
-      mutate(krankenstand = case_when(krankenstand == "überhaupt keinen" ~ 1,
-                                      krankenstand == "höchstens 9 Tage" ~ 2,
+      mutate(beeintraechtigung_1 = case_when(beeintraechtigung_1 == "zutreffend" ~ 1,
+                                            beeintraechtigung_1 == "nicht zutreffend" ~ 0)) %>% 
+      mutate(beeintraechtigung_2 = case_when(beeintraechtigung_2 == "zutreffend" ~ 2,
+                                            beeintraechtigung_2 == "nicht zutreffend" ~ 0)) %>% 
+      mutate(beeintraechtigung_3 = case_when(beeintraechtigung_3 == "zutreffend" ~ 3,
+                                            beeintraechtigung_3 == "nicht zutreffend" ~ 0)) %>% 
+      mutate(beeintraechtigung_4 = case_when(beeintraechtigung_4 == "zutreffend" ~ 4,
+                                            beeintraechtigung_4 == "nicht zutreffend" ~ 0)) %>% 
+      mutate(beeintraechtigung_5 = case_when(beeintraechtigung_5 == "zutreffend" ~ 5,
+                                            beeintraechtigung_5 == "nicht zutreffend" ~ 0)) %>% 
+      mutate(beeintraechtigung_6 = case_when(beeintraechtigung_6 == "zutreffend" ~ 6,
+                                            beeintraechtigung_6 == "nicht zutreffend" ~ 0)) %>% 
+      mutate(krankenstand = case_when(krankenstand == "ueberhaupt keinen" ~ 1,
+                                      krankenstand == "hoechstens 9 Tage" ~ 2,
                                       krankenstand == "10-24 Tage" ~ 3,
                                       krankenstand == "25-99 Tage" ~ 4,
                                       krankenstand == "100-365 Tage" ~ 5)) %>%
-      mutate(arbeitsfähigkeit_zukunft = case_when(arbeitsfähigkeit_zukunft == "ziemlich sicher" ~ 7,
-                                                  arbeitsfähigkeit_zukunft == "nicht sicher" ~ 4,
-                                                  arbeitsfähigkeit_zukunft == "unwahrscheinlich" ~ 1)) %>% 
+      mutate(arbeitsfaehigkeit_zukunft = case_when(arbeitsfaehigkeit_zukunft == "ziemlich sicher" ~ 7,
+                                                  arbeitsfaehigkeit_zukunft == "nicht sicher" ~ 4,
+                                                  arbeitsfaehigkeit_zukunft == "unwahrscheinlich" ~ 1)) %>% 
       mutate_at(c(28:30), leistungsreserven_fun) %>% #alle Leistungsreserven
-      mutate(krankenstand_präzise = case_when(krankenstand_präzise == "überhaupt keinen" ~ 1,
-                                              krankenstand_präzise == "1-3 Tag(e)" ~ 2,
-                                              krankenstand_präzise == "4-6 Tage" ~ 3,
-                                              krankenstand_präzise == "7-9 Tage" ~ 4,
-                                              krankenstand_präzise == "mehr als 9 Tage" ~ 5)) %>% 
+      mutate(krankenstand_praezise = case_when(krankenstand_praezise == "ueberhaupt keinen" ~ 1,
+                                              krankenstand_praezise == "1-3 Tag(e)" ~ 2,
+                                              krankenstand_praezise == "4-6 Tage" ~ 3,
+                                              krankenstand_praezise == "7-9 Tage" ~ 4,
+                                              krankenstand_praezise == "mehr als 9 Tage" ~ 5)) %>% 
       mutate_at(c(1:18, 20:31), as.numeric) %>% #WAI Berechnung ab hier
-      mutate(Dimension_1 = derzeitige_arbeitsfähigkeit) %>% 
-      mutate(Dimension_2 = case_when(arbeitsart == 1 ~ (körperlich_arbeitsfähigkeit * 0.5) + (psychisch_arbeitsfähigkeit * 1.5),
-                               arbeitsart == 2 ~ (körperlich_arbeitsfähigkeit * 1.5) + (psychisch_arbeitsfähigkeit * 0.5),
-                               arbeitsart == 3 ~ körperlich_arbeitsfähigkeit + psychisch_arbeitsfähigkeit)) %>% 
+      mutate(Dimension_1 = derzeitige_arbeitsfaehigkeit) %>% 
+      mutate(Dimension_2 = case_when(arbeitsart == 1 ~ (koerperlich_arbeitsfaehigkeit * 0.5) + (psychisch_arbeitsfaehigkeit * 1.5),
+                               arbeitsart == 2 ~ (koerperlich_arbeitsfaehigkeit * 1.5) + (psychisch_arbeitsfaehigkeit * 0.5),
+                               arbeitsart == 3 ~ koerperlich_arbeitsfaehigkeit + psychisch_arbeitsfaehigkeit)) %>% 
       mutate(Dimension_3 = case_when(rowSums(across(5:18) == 1) == 0 ~ 7,
                                rowSums(across(5:18) == 1) == 1 ~ 5,
                                rowSums(across(5:18) == 1) == 2 ~ 3,
@@ -486,7 +486,7 @@ server <- function(input, output, session) {
                                krankenstand == 3 ~ 3,
                                krankenstand == 4 ~ 2,
                                krankenstand == 5 ~ 1)) %>% 
-      mutate(Dimension_6 = arbeitsfähigkeit_zukunft) %>% 
+      mutate(Dimension_6 = arbeitsfaehigkeit_zukunft) %>% 
       rowwise() %>% 
       mutate(Dimension_7 = case_when(rowSums(across(28:30)) <= 3 ~ 1,
                                rowSums(across(28:30)) == 4 ~ 2,
